@@ -48,8 +48,8 @@ function shownotes() {
         html += `
         <div class="my-2-mx-2 card">
             <div class="card-body">
-               <h5 class="card-title"><b>Font ${index + 1}</b></h5>
-            <p class="card-text" style="font-family : ${fonts1} ; ">${element}</p>
+               <h5 class="card-title" style="font-family : 'New Roman' ;"><b>Font ${index + 1}</b></h5>
+            <p class="card-text">${element}</p>
             </div>
         </div>
         `;
@@ -67,3 +67,9 @@ function shownotes() {
 
     
 }
+
+let deletefont = document.getElementById("delete");
+deletefont.addEventListener('click', function(){
+    localStorage.clear();
+    location.reload();
+})
